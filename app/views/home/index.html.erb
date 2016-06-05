@@ -3,3 +3,10 @@
     <tr><td><%= i %></td><td><%= x %></td></tr>
   <% end %>
 </table>
+
+<%= link_to 'Prev Page', root_path(offset: (@offset - @window), per_page: @window) %>
+<%= link_to 'Next Page', root_path(offset: (@offset + @window), per_page: @window) %>
+| Window:
+<%= link_to '10',   root_path(offset: @offset, per_page: 10) %>
+<%= link_to '100',  root_path(offset: @offset, per_page: 100) %>
+<%= link_to '1000', root_path(offset: @offset, per_page: 1000) %>
