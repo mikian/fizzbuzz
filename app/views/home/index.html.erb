@@ -1,6 +1,16 @@
 <table>
   <%= @fizzbuzz.each do |i, x| %>
-    <tr><td><%= i %></td><td><%= x %></td></tr>
+    <tr>
+      <td><%= i %></td>
+      <td><%= x %></td>
+      <td>
+        <% if @favourites.include?(i) %>
+          <strong>Favourite</strong>
+        <% else %>
+          <%= link_to 'Favourite', root_path(index: i, offset: @offset, per_page: @window) %>
+        <% end %>
+      </td>
+    </tr>
   <% end %>
 </table>
 
