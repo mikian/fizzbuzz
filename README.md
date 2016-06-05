@@ -1,24 +1,21 @@
-# README
+# FizzBuzz
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Start server
 
-Things you may want to cover:
+    bin/rails s
 
-* Ruby version
+* Access webpage to: http://localhost:3000
 
-* System dependencies
+## APIs
 
-* Configuration
+### View FizzBuzz
 
-* Database creation
+Make GET request to `http://localhost:3000/api`, possible parameters:
 
-* Database initialization
+* `offset` - First index to display
+* `per_page` - How many FizzBuzz to display per request
 
-* How to run the test suite
+### Favourite FizzBuzz
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Make GET request to `http://localhost:3000/api/favourite?index=INDEX` where
+INDEX is the index number that is wanted to favourite.
